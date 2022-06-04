@@ -572,7 +572,7 @@ root.title('A simple Unicode to opentype glyph format converter for Affinity pro
 myFont = font.Font(family='Helvetica')
 
 # copy some sample text into clipboard for testing the program
-#clipboard.copy("test chars \n mathi தமிழ் மொழி அறிவோம் அabக்கா Mathiazhagan \n லக்‌ஷமி லக்‌ஷ்மி ஶ்ரீ ஸ்ரீ கை சித்து தூ பு பூ மெ க்‌ஷ் மொ கை வெ றா சிந்து")
+#clipboard.copy("test chars \n mathi தமிழ் மொழி Mathiazhagan \n லக்‌ஷமி லக்‌ஷ்மி ஶ்ரீ ஸ்ரீ கை சித்து தூ பு பூ மெ க்‌ஷ் மொ கை வெ றா சிந்து")
 clipboard.copy("अक्षय, राजा, रूपी, श्री , र्जी , दर्द  \n, mathi, test")
 #clipboard.copy("श्री, र्जी, दर्द")
 

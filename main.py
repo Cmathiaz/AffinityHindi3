@@ -66,6 +66,9 @@
 # Tried other languages like Malayalam, Telugu and Kannada
 # Since they depend on vertical position GPOS engine, they don't
 # work. Malayalam works somewhat except for vertical positioning.
+#
+# This is a messy program that works for Hindi partially, but mostly.
+#
 
 from tkinter import *
 import sys

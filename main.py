@@ -68,6 +68,8 @@
 # work. Malayalam works somewhat except for vertical positioning.
 #
 # This is a messy program that works for Hindi partially, but mostly.
+# It implements lookup table type 4 ligature substitutions and type 6
+# lookahead and backtrack substitutions partially.
 #
 
 from tkinter import *

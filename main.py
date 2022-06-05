@@ -899,10 +899,6 @@ def retrieve_input():
                                            word[charpos + 1], substword, substComponent, substValue)
                                 break   # break i3 loop
 
-
-
-
-
             if debug:
                 print("iter no. ij, no. of substs., final wordname =", ij, replace, wordname)
             # if (charpos+replace) > wordnamelen-1:  # recheck logic here!

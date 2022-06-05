@@ -103,8 +103,12 @@ defaultLang2 = False
 # do not select two or more, it won't work correctly!
 # I do not know any of the Devanagari languages, but they
 # seem to work mostly, but no guarantees!
+#
 # A few Hindi words like श्री, दर्द do not work! It is
 # better to enter these manually inside Affinity.
+# In some fonts, the reph sign appears as a rakaar at the
+# bottom, and in other cases, the reph sign appears before.
+# I really can't help here, since I do not know these rules.
 
 Tamil = False
 Deva = True

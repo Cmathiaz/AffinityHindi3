@@ -444,7 +444,7 @@ print("number of BT substitutions type 6 to be made =", j)
 #print((subst6BTList))
 
 if debug:
-    print(subst6List)
+    print(subst6BTList)
 
 
 # get char substitution LA type 1 list here, easier to work with glyph ID, so get glyph ID
@@ -565,9 +565,6 @@ for l in range(0, len(post2Char)):
 if debug:
     print("post-append char glyph IDs = ", post2glyID)  # like the third ள after கௌ
 
-if debug:
-    print(substList)
-    print(cmapList)
 
 # open Tk window
 root = Tk()
@@ -731,18 +728,21 @@ def retrieve_input():
                                 #print("before subst6 ", len(subst6List[i3][4]), wordname[charpos], subst6List[i3][3][0])
                                 for j3 in range(0, len(subst6List[i3][4])):
                                     if wordname[charpos + 1] == subst6List[i3][4][j3]:
-                                        # print("after subst6 ", (subst6List[i3][4][j3]), wordname[charpos + 1],
-                                        #       subst6List[i3][5])
+                                        if debug:
+                                            print("after subst6 0 0 ", (subst6List[i3][4][j3]), wordname[charpos + 1],
+                                                  subst6List[i3][5])
                                         for k3 in range(0, len(subst1List)):
                                             if subst6List[i3][5] == subst1List[k3][0]:
-                                                # print("final before", wordname[charpos], subst1List[k3][0],
-                                                #       subst1List[k3][2])
+                                                if debug:
+                                                    print("final before LA 0 0", wordname[charpos], subst1List[k3][0],
+                                                          subst1List[k3][2])
                                                 wordname[charpos] = subst1List[k3][2]
-                                                # print("final after", wordname[charpos], subst1List[k3][0],
-                                                #       subst1List[k3][2])
+                                                if debug:
+                                                    print("final after LA 0 0", wordname[charpos], subst1List[k3][0],
+                                                          subst1List[k3][2])
+                                                    print("final LA 0 0", word, wordname)
+
                                                 substdone = True
-                                                #print("final", word, wordname)
-                                                # quit()
                                                 continue
 
                             if subst6List[i3][0] == '1' and subst6List[i3][1] == '0':
@@ -753,19 +753,21 @@ def retrieve_input():
                                     #       subst6List[i3][3][0])
                                     for j3 in range(0, len(subst6List[i3][4])):
                                         if wordname[charpos + 2] == subst6List[i3][4][j3]:
-                                            # print("2 seq. after subst6 ", (subst6List[i3][4][j3]),
-                                            #       wordname[charpos + 1], subst6List[i3][5])
+                                            if debug:
+                                                print("after subst6 1 0 ", (subst6List[i3][4][j3]),
+                                                       wordname[charpos + 1], subst6List[i3][5])
                                             for k3 in range(0, len(subst1List)):
                                                 if subst6List[i3][5] == subst1List[k3][0]:
-                                                    # print("2 seq. final before", wordname[charpos], subst1List[k3][0],
-                                                    #       subst1List[k3][2])
+                                                    if debug:
+                                                        print("final LA 1 0 before", wordname[charpos], subst1List[k3][0],
+                                                              subst1List[k3][2])
                                                     wordname[charpos] = subst1List[k3][2]
-                                                    # print("2 seq. final after", wordname[charpos], subst1List[k3][0],
-                                                    #       subst1List[k3][2])
+                                                    if debug:
+                                                        print("final LA 1 0 after", wordname[charpos], subst1List[k3][0],
+                                                              subst1List[k3][2])
+                                                        print("final LA 1 0", word, wordname)
 
                                                     substdone = True
-                                                    #print("final BT", word, wordname)
-
                                                     continue
 
                 # BT substitution
@@ -778,19 +780,21 @@ def retrieve_input():
                                 # print("before subst6 ", len(subst6List[i3][4]), wordname[charpos], subst6List[i3][3][0])
                                 for j3 in range(0, len(subst6BTList[i3][4])):
                                     if wordname[charpos - 1] == subst6BTList[i3][4][j3]:
-                                        # print("after subst6BT ", (subst6BTList[i3][4][j3]),
-                                        #       wordname[charpos - 1], subst6BTList[i3][5])
+                                        if debug:
+                                            print("after subst6BT 0 0 ", (subst6BTList[i3][4][j3]),
+                                                  wordname[charpos - 1], subst6BTList[i3][5])
                                         for k3 in range(0, len(subst1BTList)):
                                             if subst6BTList[i3][5] == subst1BTList[k3][0]:
-                                                # print("final BT before", wordname[charpos], subst1BTList[k3][0],
-                                                #       subst1BTList[k3][2])
+                                                if debug:
+                                                    print("final BT  0 0 before", wordname[charpos], subst1BTList[k3][0],
+                                                          subst1BTList[k3][2])
                                                 wordname[charpos] = subst1BTList[k3][2]
-                                                # print("final BT after", wordname[charpos], subst1BTList[k3][0],
-                                                #       subst1BTList[k3][2])
+                                                if debug:
+                                                    print("final BT 0 0 after", wordname[charpos], subst1BTList[k3][0],
+                                                          subst1BTList[k3][2])
+                                                    print("final BT 0 0", word, wordname)
 
                                                 substdone = True
-                                                #print("final BT", word, wordname)
-
                                                 continue
 
                             if subst6BTList[i3][0] == '1' and subst6BTList[i3][1] == '0':
@@ -801,21 +805,24 @@ def retrieve_input():
                                     #       wordname[charpos], subst6BTList[i3][3][0])
                                     for j3 in range(0, len(subst6BTList[i3][4])):
                                         if wordname[charpos - 2] == subst6BTList[i3][4][j3]:
-                                            # print("2 seq. after subst6 ", (subst6BTList[i3][4][j3]),
-                                            #       wordname[charpos - 2], subst6BTList[i3][5])
+                                            if debug:
+                                                print("after subst6 1 0 ", (subst6BTList[i3][4][j3]),
+                                                      wordname[charpos - 2], subst6BTList[i3][5])
                                             for k3 in range(0, len(subst1BTList)):
                                                 if subst6BTList[i3][5] == subst1BTList[k3][0]:
-                                                    # print("2 seq. final BT before", wordname[charpos],
-                                                    #       subst1BTList[k3][0], subst1BTList[k3][2])
+                                                    if debug:
+                                                        print("final BT 1 0 before", wordname[charpos],
+                                                              subst1BTList[k3][0], subst1BTList[k3][2])
                                                     wordname[charpos] = subst1BTList[k3][2]
-                                                    # print("2 seq. final BT after", wordname[charpos],
-                                                    #       subst1BTList[k3][0], subst1BTList[k3][2])
+                                                    if debug:
+                                                        print("final BT 1 0 after", wordname[charpos],
+                                                              subst1BTList[k3][0], subst1BTList[k3][2])
+                                                        print("final BT 1 0", word, wordname)
 
                                                     substdone = True
-                                                    #print("final", word, wordname)
-
                                                     continue
 
+                # type 4 subst 3, 2 and 1 components
                 for i3 in range(0, len(substList)):
                     if wordname[charpos] == substList[i3][0]:  #current char is in subst list
                         substword = wordname[charpos]

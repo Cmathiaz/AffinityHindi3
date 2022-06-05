@@ -102,11 +102,14 @@ defaultLang2 = False
 # English is bypassed and so will also come
 # do not select two or more, it won't work correctly!
 # I do not know any of the Devanagari languages, but they
-# seem to work, but no guarantees!
+# seem to work mostly, but no guarantees!
+# A few Hindi words like श्री, दर्द do not work! It is
+# better to enter these manually inside Affinity.
+
 Tamil = False
 Deva = True
 
-# the following Dravidian languages don't work
+# the following Dravidian languages don't work correctly
 # as they rely mostly on GPOS engine to position char vertically!
 # Malayalam seems to work a bit, except for vertical positioning
 # I do not know these languages!

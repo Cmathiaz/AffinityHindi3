@@ -90,6 +90,8 @@ uniDisp = ""  # unicode value display for debugging
 
 # enter the language ttf font below!
 # strip and save a temp xml file with only GSUB and cmap tables for the font
+# the conversion is faster, if the font .ttf or .ttc file contains
+# fewer number of glyphs with just one language.
 
 font2 = TTFont("akshar.ttf", fontNumber=0)
 font2.saveXML("temp.xml", tables=["GSUB", "cmap"])

@@ -40,10 +40,12 @@
 # more work well.
 #
 # In Latha font, chars like 'vi' does not display correctly
-# since it depends on GPOS data, and not GSUB. The glyph for this
-# character 'vi is not inside .ttf file, and it has to be rendered
-# using GPOS table by the Affinity app. It does so somewhat imperfectly,
-# but otherwise it's fine.
+# since it depends on GSUB lookup type 5 and this is not yet
+# implemented. The glyph for this character 'vi is not inside
+# the .ttf file, and the tail for this character has to be rendered
+# using GSUB type 5 lookup table. This font does not have the glyphs
+# for English chars too. So, it does not display English letters
+# along with Tamil in this program.
 #
 # For other Indic languages, you will have to change some of the data
 # inside the section below in this program. Tested up to 20-page
@@ -93,7 +95,7 @@ uniDisp = ""  # unicode value display for debugging
 # the conversion is faster, if the font .ttf or .ttc file contains
 # fewer number of glyphs with just one language.
 
-font2 = TTFont("akshar.ttf", fontNumber=0)
+font2 = TTFont("latha.ttf", fontNumber=0)
 font2.saveXML("temp.xml", tables=["GSUB", "cmap"])
 
 debug = False

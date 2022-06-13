@@ -95,7 +95,7 @@ uniDisp = ""  # unicode value display for debugging
 # the conversion is faster, if the font .ttf or .ttc file contains
 # fewer number of glyphs with just one language.
 
-font2 = TTFont("latha.ttf", fontNumber=0)
+font2 = TTFont("akshar.ttf", fontNumber=0)
 font2.saveXML("temp.xml", tables=["GSUB", "cmap"])
 
 debug = False
@@ -518,6 +518,12 @@ print("total number of all glyphs in cmap=", k)
 #print(cmapList)
 
 # find names for CR and LF names in cmap
+CRName = ""
+LFName = ""
+SpaceName = ""
+ZWNJName = ""
+ZWJName = ""
+
 for k in range(0, len(cmapList)):
     if cmapList[k][0] == '0xa':
         CRName = cmapList[k][1]
